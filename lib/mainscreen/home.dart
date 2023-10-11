@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
 import 'package:toonanime/mainscreen/singleanime.dart';
-
+import 'package:toonanime/player/webplayer.dart';
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -112,15 +112,18 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                             //crossAxisAlignment: WrapCrossAlignment.start,
                                             children:[
                                                 card("assets/narutoS.jpg", "Naruto shippuden", "500 ep",(){
-                                                   Get.to(
-                                                    const SingleAniView(
-                                                    img: "assets/naruto-shippuden.jpg",
-                                                    img1: "assets/narutoS.jpg",
-                                                    title: "Naruto shippuden",
-                                                    epi: "500",
-                                                   ),
-                                                   transition: Transition.rightToLeft
-                                                   );
+                                                  //  Get.to(
+                                                  //   const SingleAniView(
+                                                  //   img: "assets/naruto-shippuden.jpg",
+                                                  //   img1: "assets/narutoS.jpg",
+                                                  //   title: "Naruto shippuden",
+                                                  //   epi: "500",
+                                                  //  ),
+                                                  //  transition: Transition.rightToLeft
+                                                  //  );
+                                                  Get.to(
+                                                    WebPlayer()
+                                                  );
                                                 },context),
                                            card("assets/onepice.jpg", "One pice", "1071 ep",(){
                                                    Get.to(
